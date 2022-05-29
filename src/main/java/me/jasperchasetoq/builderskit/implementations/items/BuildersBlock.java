@@ -11,7 +11,8 @@ import org.bukkit.inventory.ItemStack;
 public class BuildersBlock extends SlimefunItem {
 
     public BuildersBlock(ItemGroup itemGroup, SlimefunItemStack item, RecipeType recipeType, ItemStack[] recipe) {
-        super(itemGroup, item, recipeType, recipe);
+        super(itemGroup, item, recipeType, recipe, new SlimefunItemStack(itemStack, 16)
+        );
     }
 
     @Override
