@@ -1,11 +1,10 @@
-package me.jasperchasetoq.builderskit;
+package me.jasperchasetoq.builderskit.Builderskit;
 
 import io.github.thebusybiscuit.slimefun4.api.SlimefunAddon;
 import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
 import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
-import io.github.thebusybiscuit.slimefun4.implementation.SlimefunItems;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.config.Config;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.items.CustomItemStack;
 import org.bukkit.Material;
@@ -13,7 +12,7 @@ import org.bukkit.NamespacedKey;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.java.JavaPlugin;
 
-public class builderskit extends JavaPlugin implements SlimefunAddon {
+public class BuildersKit extends JavaPlugin implements SlimefunAddon {
 
     @Override
     public void onEnable() {
@@ -31,7 +30,6 @@ public class builderskit extends JavaPlugin implements SlimefunAddon {
 
         SlimefunItemStack itemStack = new SlimefunItemStack("MY_ADDON_ITEM", Material.DEEPSLATE_BRICKS, "&aBB Deepslate Bricks", "", "&7Builders block");
 
-// A 3x3 shape representing our recipe
         ItemStack[] recipe = {
                 new ItemStack(Material.DEEPSLATE_BRICKS),    new ItemStack(Material.DEEPSLATE_BRICKS),                              new ItemStack(Material.DEEPSLATE_BRICKS),
                 new ItemStack(Material.DEEPSLATE_BRICKS),    new ItemStack(Material.NETHER_STAR),                              new ItemStack(Material.DEEPSLATE_BRICKS),
@@ -40,7 +38,7 @@ public class builderskit extends JavaPlugin implements SlimefunAddon {
 
         SlimefunItem sfItem = new SlimefunItem(itemGroup, itemStack, RecipeType.ENHANCED_CRAFTING_TABLE, recipe);
         sfItem.register(this);
-// Our item is now registered
+
     }
 
     @Override
