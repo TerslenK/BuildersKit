@@ -1,10 +1,12 @@
-package me.jasperchasetoq.builderskit.Builderskit;
+package me.jasperchasetoq.builderskit;
 
 import io.github.thebusybiscuit.slimefun4.api.SlimefunAddon;
+import io.github.thebusybiscuit.slimefun4.api.events.PlayerRightClickEvent;
 import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
 import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
+import io.github.thebusybiscuit.slimefun4.core.handlers.BlockUseHandler;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.config.Config;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.items.CustomItemStack;
 import org.bukkit.Material;
@@ -36,8 +38,27 @@ public class BuildersKit extends JavaPlugin implements SlimefunAddon {
                 new ItemStack(Material.DEEPSLATE_BRICKS),    new ItemStack(Material.DEEPSLATE_BRICKS),                              new ItemStack(Material.DEEPSLATE_BRICKS),
         };
 
-        SlimefunItem sfItem = new SlimefunItem(itemGroup, itemStack, RecipeType.ENHANCED_CRAFTING_TABLE, recipe);
-        sfItem.register(this);
+        BuildersBlock DEEPSLATE_BRICKS = new BuildersBlock(itemGroup, itemStack, RecipeType.ENHANCED_CRAFTING_TABLE, recipe);
+        DEEPSLATE_BRICKS.register(this);
+
+    }
+
+    public class BuildersBlock extends SlimefunItem {
+
+        public BuildersBlock(ItemGroup itemGroup, SlimefunItemStack item, RecipeType recipeType, ItemStack[] recipe) {
+            super(itemGroup, item, recipeType, recipe);
+        }
+
+        @Override
+        public void preRegister() {
+            BlockUseHandler blockUseHandler = this::onBlockRightClick;
+            addItemHandler(blockUseHandler);
+        }
+
+        private void onBlockRightClick(PlayerRightClickEvent event) {
+
+        }
+
 
     }
 
