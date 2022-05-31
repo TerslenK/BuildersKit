@@ -1,4 +1,4 @@
-package me.jasperchasetoq.builderskit.implementations.items;
+package me.jasperchasetoq.builderskit.implementations.classes.BuildersBlock;
 
 import io.github.thebusybiscuit.slimefun4.api.events.PlayerRightClickEvent;
 import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;

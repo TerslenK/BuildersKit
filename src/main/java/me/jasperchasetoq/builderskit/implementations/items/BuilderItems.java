@@ -1,9 +1,9 @@
-package me.jasperchasetoq.builderskit.implementations;
+package me.jasperchasetoq.builderskit.implementations.items;
 
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
 import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
 import me.jasperchasetoq.builderskit.BuildersKit;
-import me.jasperchasetoq.builderskit.implementations.items.BuildersBlock;
+import me.jasperchasetoq.builderskit.implementations.classes.BuildersBlock.BuildersBlock;
 import me.jasperchasetoq.builderskit.utils.Category;
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;

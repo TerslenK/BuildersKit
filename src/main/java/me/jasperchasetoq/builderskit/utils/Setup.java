@@ -1,7 +1,7 @@
 package me.jasperchasetoq.builderskit.utils;
 
 import me.jasperchasetoq.builderskit.BuildersKit;
-import me.jasperchasetoq.builderskit.implementations.BuilderItems;
+import me.jasperchasetoq.builderskit.implementations.items.BuilderItems;
 
 public class Setup {
     public static void setup(BuildersKit bk) {
